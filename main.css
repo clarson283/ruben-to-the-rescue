@@ -1,0 +1,14 @@
+.jumbotron {
+	margin: 20px;
+	border-radius: 8px;
+	background-color: #00815F;
+	color: white;
+}
+
+.nav-pills > li.active > a {
+	background-color: #00815F;
+}
+
+div h1, div h4, div p, div li {
+	font-family: 'Oxygen', sans-serif;
+}
