@@ -63,8 +63,8 @@
 Or email us at rubentotherescue@gmail.com</p>
             <div id="contact">
                 <h4>Contact for Questions or Appointments</h4>
-            <!--    <form action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="post" enctype="text/plain">-->
-                <form class="form-horizontal" action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="post" enctype="text/plain">
+            <!--<form action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="post" enctype="text/plain">-->
+                <form class="form-horizontal" action="mail.php" method="POST" ng-controller="formController" ng-submit="submit()">
                     <div class="form-group">
                         <label for="nameInput" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
@@ -94,36 +94,40 @@ Or email us at rubentotherescue@gmail.com</p>
                         <label for="daysOfWeek" class="col-sm-2 control-label">Days Available</label>
                         <div class="col-sm-10" id="daysOfWeek">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="option1">Monday
+                                <input type="checkbox" id="inlineCheckbox1" name="mon" value="option1">Monday
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox2" value="option2">Tuesday
+                                <input type="checkbox" id="inlineCheckbox2" name="tues" value="option2">Tuesday
                             </label>
                              <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox3" value="option3">Wednesday
+                                <input type="checkbox" id="inlineCheckbox3" name="wed" value="option3">Wednesday
                             </label>
                              <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox4" value="option4">Thursday
+                                <input type="checkbox" id="inlineCheckbox4" name="thurs" value="option4">Thursday
                             </label>
                              <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox5" value="option5">Friday
+                                <input type="checkbox" id="inlineCheckbox5" name="fri" value="option5">Friday
                             </label>
                              <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox6" value="option6">Saturday
+                                <input type="checkbox" id="inlineCheckbox6" name="sat" value="option6">Saturday
                             </label>
                              <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox7" value="option7">Sunday
+                                <input type="checkbox" id="inlineCheckbox7" name="sun" value="option7">Sunday
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group">  
                         <div class="col-sm-offset-2 col-sm-10">  
-                            <button class="btn btn-default" type="submit">Submit</button>
+                            <button class="btn btn-default" type="submit" name="submit">Submit</button>
                         </div>
                     </div>
                 </form>
             </div>
+
+
+
+
         </div>
 	</section>
 </div>
