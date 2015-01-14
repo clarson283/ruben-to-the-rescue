@@ -12,3 +12,7 @@
 div h1, div h4, div p, div li {
 	font-family: 'Oxygen', sans-serif;
 }
+
+.pull-left img {
+	width: 300px;
+}

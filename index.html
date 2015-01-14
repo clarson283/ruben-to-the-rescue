@@ -29,6 +29,9 @@
 <body>
     <div class="jumbotron">
         <div class="container">
+            <div class="pull-left">
+                <img src="images/logo1.jpg">
+            </div>
             <h1>Ruben to the Rescue!</h1>
             <p>Setup, support and assitance for all your technological needs.</p>
         </div>
@@ -57,14 +60,11 @@
             Tutoring, device installation, repairs, networking, troubleshooting.</p>
         </div>
         <div class="panel" ng-show="panel.isSelected(3)">
-            <h4>Contact</h4>
-            <p>For a free consultation, or to schedule an appointment, please call:
-
-Or email us at rubentotherescue@gmail.com</p>
+            <h4>Contact for Questions or Appointments</h4>
+            <p>For a free consultation, or to schedule an appointment fill out the below form or send an email to <a href="mailto:ruben2therescue@gmail.com">ruben2therescue@gmail.com</a></p>
             <div id="contact">
-                <h4>Contact for Questions or Appointments</h4>
             <!--<form action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="post" enctype="text/plain">-->
-                <form class="form-horizontal" action="mail.php" method="POST" ng-controller="formController" ng-submit="submit()">
+                <form class="form-horizontal" action="mail.php" method="GET" ng-controller="formController" ng-submit="submit()">
                     <div class="form-group">
                         <label for="nameInput" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
