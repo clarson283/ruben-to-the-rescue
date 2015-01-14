@@ -19,7 +19,7 @@
 			$scope.formData = {};
 			$scope.submit = function () {
 				$http({
-					method: 'POST',
+					method: 'GET',
 					url: 'mail.php',
 					data: $.param($scope.formData),
 					headers: {'Content-Type': 'application/x-www-form-urlencoded'}
