@@ -39,3 +39,7 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+
+.nav-tabs.nav-justified {
+	margin-top: 20px;
+}
