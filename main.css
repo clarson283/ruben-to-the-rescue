@@ -9,6 +9,29 @@
 	background-color: #00815F;
 }
 
-div h1, div h4, div p, div li {
-	font-family: 'Oxygen', sans-serif;
+.container-fluid.main-info {
+	background-color: #eee;
+	padding: 40px 30px;
+	letter-spacing: 2px;
+}
+
+.container-fluid.main-info p {
+	font-size: 18px;
+}
+
+.container-fluid.panel-section {
+	padding: 10px 30px;
+}
+
+img {
+	width: 125px;
+}
+
+.col-xs-2 img {
+	text-align: center;
+}
+
+.tabrow {
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }

@@ -27,14 +27,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 </head>
 <body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Ruben to the Rescue!</h1>
+
+<section ng-controller="PanelController as panel">
+
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <img src="images/logo3.jpg">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 tabrow">
+                    <ul class="nav nav-tabs nav-justified">
+                        
+                        <li ng-class="{active: panel.isSelected(1)}">
+                            <a href ng-click="panel.selectTab(1)">About</a>
+                        </li>
+                        <li ng-class="{active: panel.isSelected(2)}">
+                            <a href ng-click="panel.selectTab(2)">Services Available</a>
+                        </li>
+                        <li ng-class="{active: panel.isSelected(3)}">
+                            <a href ng-click="panel.selectTab(3)">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        <div class="container-fluid main-info">
+            <h1 class="text-uppercase">Ruben to the Rescue!</h1>
             <p>Setup, support and assitance for all your technological needs.</p>
         </div>
     </div>
-<div class="container">
-	<section ng-controller="PanelController as panel">
+
+<div class="container-fluid panel-section">
+<!--	<section ng-controller="PanelController as panel">
+    
 		<ul class="nav nav-pills">
 			<li ng-class="{active: panel.isSelected(1) }">
                 <a href ng-click="panel.selectTab(1)">About</a>
@@ -46,6 +71,7 @@
                 <a href ng-click="panel.selectTab(3)">Contact</a>
             </li>
 		</ul>
+    -->
         <div class="panel" ng-show="panel.isSelected(1)">
             <h4>About</h4>
             <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue!</p>
@@ -121,13 +147,9 @@
                     </div>
                 </form>
             </div>
-
-
-
-
         </div>
-	</section>
 </div>
+</section>
 
 <script src="js/app.js"></script>
 </body>
