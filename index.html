@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="reset.css">
-    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,7 +29,7 @@
 
 <section ng-controller="PanelController as panel">
 
-    <div class="container-fluid">
+    <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-2 col-xs-12">
                     <img src="images/logo3.jpg">
@@ -54,24 +53,11 @@
         <div class="container-fluid main-info">
             <h1 class="text-uppercase">Ruben to the Rescue!</h1>
             <p>Setup, support and assitance for all your technological needs.</p>
+            <!--Background-Image: Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries.-->
         </div>
     </div>
 
-<div class="container-fluid panel-section">
-<!--	<section ng-controller="PanelController as panel">
-    
-		<ul class="nav nav-pills">
-			<li ng-class="{active: panel.isSelected(1) }">
-                <a href ng-click="panel.selectTab(1)">About</a>
-            </li>
-			<li ng-class="{active: panel.isSelected(2) }">
-                <a href ng-click="panel.selectTab(2)">Services Available</a>
-            </li>
-			<li ng-class="{active: panel.isSelected(3) }">
-                <a href ng-click="panel.selectTab(3)">Contact</a>
-            </li>
-		</ul>
-    -->
+<div class="container panel-section">
         <div class="panel" ng-show="panel.isSelected(1)">
             <h4>About</h4>
             <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue!</p>

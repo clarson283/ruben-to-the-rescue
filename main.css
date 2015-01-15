@@ -1,34 +1,38 @@
-.jumbotron {
-	margin: 20px;
-	border-radius: 8px;
-	background-color: #00815F;
-	color: white;
+body {
+	background-color: #eee;
 }
 
-.nav-pills > li.active > a {
-	background-color: #00815F;
+.container .top-site {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .container-fluid.main-info {
 	background-color: #eee;
-	padding: 40px 30px;
-	letter-spacing: 2px;
+	padding: 70px 30px;
+	background-image: url('images/macimage.jpg');
+	background-size: cover;
+	background-position: 50% 20%;
+	background-repeat: no-repeat;
 }
 
 .container-fluid.main-info p {
 	font-size: 18px;
+	letter-spacing: 2px;
 }
 
-.container-fluid.panel-section {
+.container-fluid.main-info h1 {
+	letter-spacing: 5px;
+	font-size: 40px
+	;
+}
+
+.container.panel-section {
 	padding: 10px 30px;
 }
 
 img {
 	width: 125px;
-}
-
-.col-xs-2 img {
-	text-align: center;
 }
 
 .tabrow {
