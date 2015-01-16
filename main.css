@@ -43,3 +43,7 @@ img {
 .nav-tabs.nav-justified {
 	margin-top: 20px;
 }
+
+div p {
+	line-height: 2;
+}
