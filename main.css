@@ -35,6 +35,10 @@ img {
 	width: 125px;
 }
 
+#testimonials img {
+	width: 30px;
+}
+
 .tabrow {
 	text-transform: uppercase;
 	letter-spacing: 2px;
