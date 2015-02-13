@@ -61,6 +61,20 @@
         <div class="panel" ng-show="panel.isSelected(1)">
             <h4>About</h4>
             <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue!</p>
+
+
+            <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentCtrl.addComment">
+                <blockquote>
+                    {{commentCtrl.comment.body}}
+                    <cite>from: {{commentCtrl.comment.author}}</cite>
+                </blockquote>
+                <textarea ng-model="commentCtrl.comment.body"></textarea>
+                <label>from: </label>
+                <input ng-model="commentCtrl.comment.author" type="text" />
+                <input type="submit" value="submit" />
+            </form>
+
+
         </div>
         <div class="panel" ng-show="panel.isSelected(2)">
             <h4>Services Available</h4>

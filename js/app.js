@@ -37,4 +37,13 @@
 			}
 		});
 
+		app.controller("CommentController", function () {
+			this.comment = {};
+
+			this.addComment = function() {
+				comments.push(this.comment);
+				this.comment = {};
+			};
+		});
+
 })();
