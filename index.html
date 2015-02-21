@@ -23,7 +23,6 @@
 <body>
 
 <section ng-controller="PanelController as panel">
-
     <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-2 col-xs-12">
@@ -52,138 +51,136 @@
         </div>
     </div>
 
-<div class="container panel-section">
-        <div class="panel" ng-show="panel.isSelected(1)">
-            <h4>About</h4>
-            <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue! Call for a free consultation at (516) 387-2522 <span class="glyphicon glyphicon-phone"></span></p>
-            <br>
-            <div id="testimonials">
-               <h5>Testimonials</h5>
-              
-                    <blockquote><img src="images/quote.png">
-                    Ruben should be given special accolades for his patience with those of us who are not techno geniuses. He remembered me every time I went in there and knew exactly what I had purchased. In this technologically advanced world, it is nice to see that some people have not lost the personal touch...Way to go Ruben and the rest of the staff!<img src="images/close-quote.png">
-                    <footer>Cate, longtime customer</footer>
-                    </blockquote>
-                    <blockquote><img src="images/quote.png">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.<img src="images/close-quote.png">
-                    <footer>Name, longtime customer</footer>
-                    </blockquote>
-                
+    <div class="container panel-section">
+            <div class="panel" ng-show="panel.isSelected(1)">
+                <h4>About</h4>
+                <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue! Call for a free consultation at (516) 387-2522 <span class="glyphicon glyphicon-phone"></span></p>
+                <br>
+
+                <div id="testimonials">
+                   <h5>Testimonials</h5>
+                        <blockquote><img src="images/quote.png">
+                        Ruben should be given special accolades for his patience with those of us who are not techno geniuses. He remembered me every time I went in there and knew exactly what I had purchased. In this technologically advanced world, it is nice to see that some people have not lost the personal touch...Way to go Ruben and the rest of the staff!<img src="images/close-quote.png">
+                        <footer>Cate, longtime customer</footer>
+                        </blockquote>
+                        <blockquote><img src="images/quote.png">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.<img src="images/close-quote.png">
+                        <footer>Name, longtime customer</footer>
+                        </blockquote>     
+                </div>
+
+                <div id="comment-section">
+                    <br><br><h5>Testing Comment Section</h5>
+                    <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentCtrl.addComment">
+                        <blockquote>
+                            {{commentCtrl.comment.body}}<br>
+                            <cite>- {{commentCtrl.comment.author}}</cite>
+                        </blockquote>
+                        <div class="form-group">
+                            <label>message: </label>
+                            <textarea ng-model="commentCtrl.comment.body" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>from: </label>
+                            <input ng-model="commentCtrl.comment.author" type="text" class="form-control" />
+                        </div>
+                        <input type="submit" value="submit" class="btn btn-default"/>
+                    </form>
+                </div>
             </div>
 
-            <div id="comment-section">
-                <br><br><h5>Testing Comment Section</h5>
-                <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentCtrl.addComment">
-                    <blockquote>
-                        {{commentCtrl.comment.body}}<br>
-                        <cite>- {{commentCtrl.comment.author}}</cite>
-                    </blockquote>
-                    <div class="form-group">
-                        <label>message: </label>
-                        <textarea ng-model="commentCtrl.comment.body" class="form-control" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>from: </label>
-                        <input ng-model="commentCtrl.comment.author" type="text" class="form-control" />
-                    </div>
-                    <input type="submit" value="submit" class="btn btn-default"/>
-                </form>
+            <div class="panel" ng-show="panel.isSelected(2)">
+                <h4>Services Available</h4>
+                <p>Ruben to the Rescue provides a number of services to multiple devices. Whether you are setting up a home office, running a small business, or you are having a hard time with a personal device, Ruben To The Rescue can help!</p>
+                <br/>
+                <ul>
+                    <li>&bull; Device Installation</li>
+                    <li>&bull; Repairs</li>
+                    <li>&bull; Networking</li>
+                    <li>&bull; Troubleshooting</li>
+                    <li>&bull; Virus Removal</li>
+                    <li>&bull; Purchase Guidance</li>
+                    <li>&bull; Tutoring</li>
+                    <li>&bull; Upgrades</li>
+                    <li>&bull; Data Recovery</li>
+                    <li>&bull; Cellphone Support</li>
+                </ul>
             </div>
+            
+            <div class="panel" ng-show="panel.isSelected(3)">
+                <h4>Contact for Questions or Appointments</h4>
+                <p>Call Ruben To The Rescue at (516) 387-2522 or for a free consultation or to schedule an appointment, please fill out the form below or e-mail us at <a href="ruben2therescue@gmail.com">ruben2therescue@gmail.com</a></p>
+                <div id="contact">
+                <!--<form action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="POST" enctype="text/plain">-->
+                    <form class="form-horizontal" action="mail.php" method="POST" ng-controller="formController" ng-submit="submit()">
+                        <div class="form-group">
+                            <label for="nameInput" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" id="nameInput" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailInput" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="email" id="emailInput" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="numInput" class="col-sm-2 control-label">Number</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" name="number" id="numInput" placeholder="Telephone Number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="messaPOSText" class="col-sm-2 control-label">Services Needed</label>
+                            <div class="col-sm-10">
+                                <textarea id="messaPOSText" name="message" class="form-control" rows="5" placeholder="Services Needed"></textarea>
+                            </div>
+                        </div>   
 
+                        <div class="form-group">
+                            <label for="daysOfWeek" class="col-sm-2 control-label">Days Available</label>
+                            <div class="col-sm-10" id="daysOfWeek">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox1" name="mon" value="option1">Monday
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox2" name="tues" value="option2">Tuesday
+                                </label>
+                                 <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" name="wed" value="option3">Wednesday
+                                </label>
+                                 <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox4" name="thurs" value="option4">Thursday
+                                </label>
+                                 <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox5" name="fri" value="option5">Friday
+                                </label>
+                                 <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox6" name="sat" value="option6">Saturday
+                                </label>
+                                 <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox7" name="sun" value="option7">Sunday
+                                </label>
+                            </div>
+                        </div>
 
-        </div>
-        <div class="panel" ng-show="panel.isSelected(2)">
-            <h4>Services Available</h4>
-            <p>Ruben to the Rescue provides a number of services to multiple devices. Whether you are setting up a home office, running a small business, or you are having a hard time with a personal device, Ruben To The Rescue can help!</p>
-            <br/>
-            <ul>
-                <li>&bull; Device Installation</li>
-                <li>&bull; Repairs</li>
-                <li>&bull; Networking</li>
-                <li>&bull; Troubleshooting</li>
-                <li>&bull; Virus Removal</li>
-                <li>&bull; Purchase Guidance</li>
-                <li>&bull; Tutoring</li>
-                <li>&bull; Upgrades</li>
-                <li>&bull; Data Recovery</li>
-                <li>&bull; Cellphone Support</li>
-            </ul>
-        </div>
-        <div class="panel" ng-show="panel.isSelected(3)">
-            <h4>Contact for Questions or Appointments</h4>
-            <p>Call Ruben To The Rescue at (516) 387-2522 or for a free consultation or to schedule an appointment, please fill out the form below or e-mail us at <a href="ruben2therescue@gmail.com">ruben2therescue@gmail.com</a></p>
-            <div id="contact">
-            <!--<form action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="POST" enctype="text/plain">-->
-                <form class="form-horizontal" action="mail.php" method="POST" ng-controller="formController" ng-submit="submit()">
-                    <div class="form-group">
-                        <label for="nameInput" class="col-sm-2 control-label">Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="name" id="nameInput" placeholder="Name">
+                        <div class="form-group">  
+                            <div class="col-sm-offset-2 col-sm-10">  
+                                <button class="btn btn-default" type="submit" name="submit">Submit</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="emailInput" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="email" id="emailInput" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="numInput" class="col-sm-2 control-label">Number</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" name="number" id="numInput" placeholder="Telephone Number">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="messaPOSText" class="col-sm-2 control-label">Services Needed</label>
-                        <div class="col-sm-10">
-                            <textarea id="messaPOSText" name="message" class="form-control" rows="5" placeholder="Services Needed"></textarea>
-                        </div>
-                    </div>   
-
-                    <div class="form-group">
-                        <label for="daysOfWeek" class="col-sm-2 control-label">Days Available</label>
-                        <div class="col-sm-10" id="daysOfWeek">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" name="mon" value="option1">Monday
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox2" name="tues" value="option2">Tuesday
-                            </label>
-                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox3" name="wed" value="option3">Wednesday
-                            </label>
-                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox4" name="thurs" value="option4">Thursday
-                            </label>
-                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox5" name="fri" value="option5">Friday
-                            </label>
-                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox6" name="sat" value="option6">Saturday
-                            </label>
-                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox7" name="sun" value="option7">Sunday
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">  
-                        <div class="col-sm-offset-2 col-sm-10">  
-                            <button class="btn btn-default" type="submit" name="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-</div>
+    </div>
 </section>
 
 <!--Javascript and jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
