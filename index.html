@@ -19,11 +19,6 @@
     <![endif]-->
     
 
-    <!--Javascript and jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 </head>
 <body>
 
@@ -52,7 +47,7 @@
 
         <div class="container-fluid main-info">
             <h1 class="text-uppercase">Ruben to the Rescue!</h1>
-            <p>Setup, support and assitance for all your technological needs.</p>
+            <p>Setup, support and assitance for all of your technological needs.</p>
             <!--Background-Image: Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries.-->
         </div>
     </div>
@@ -60,14 +55,19 @@
 <div class="container panel-section">
         <div class="panel" ng-show="panel.isSelected(1)">
             <h4>About</h4>
-            <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue!</p>
+            <p>Ruben was born and raised in Long Beach, New York, where he is currently working at a wireless store. Ruben has always loved technology and has a passion for teaching people to live in harmony with their devices. Whether you need tech support, purchasing advice, networking or virus removal, Ruben will come to your rescue! Call for a free consultation at (516) 387-2522 <span class="glyphicon glyphicon-phone"></span></p>
             <br>
             <div id="testimonials">
                <h5>Testimonials</h5>
               
-                    <p><img src="images/quote.png">
-                    Ruben should be given special accolades for his patience with those of us who are not techno geniuses. He remembered me every time I went in there and knew exactly what I had purchased. In this technologically advanced world, it is nice to see that some people have not lost the personal touch...Way to go Ruben and the rest of the staff!<img src="images/close-quote.png"></p>
-                    <p>-Cate, customer for 14 years</p>
+                    <blockquote><img src="images/quote.png">
+                    Ruben should be given special accolades for his patience with those of us who are not techno geniuses. He remembered me every time I went in there and knew exactly what I had purchased. In this technologically advanced world, it is nice to see that some people have not lost the personal touch...Way to go Ruben and the rest of the staff!<img src="images/close-quote.png">
+                    <footer>Cate, longtime customer</footer>
+                    </blockquote>
+                    <blockquote><img src="images/quote.png">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.<img src="images/close-quote.png">
+                    <footer>Name, longtime customer</footer>
+                    </blockquote>
                 
             </div>
 
@@ -79,6 +79,7 @@
                         <cite>- {{commentCtrl.comment.author}}</cite>
                     </blockquote>
                     <div class="form-group">
+                        <label>message: </label>
                         <textarea ng-model="commentCtrl.comment.body" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="form-group">
@@ -93,13 +94,24 @@
         </div>
         <div class="panel" ng-show="panel.isSelected(2)">
             <h4>Services Available</h4>
-            <p>Ruben to the Rescue provides a number of services to multiple devices. Whether you are setting up a home office, running a small business, or you are having a hard time with a personal device, Ruben to the rescue can help!
+            <p>Ruben to the Rescue provides a number of services to multiple devices. Whether you are setting up a home office, running a small business, or you are having a hard time with a personal device, Ruben To The Rescue can help!</p>
             <br/>
-            Tutoring, device installation, repairs, networking, troubleshooting.</p>
+            <ul>
+                <li>&bull; Device Installation</li>
+                <li>&bull; Repairs</li>
+                <li>&bull; Networking</li>
+                <li>&bull; Troubleshooting</li>
+                <li>&bull; Virus Removal</li>
+                <li>&bull; Purchase Guidance</li>
+                <li>&bull; Tutoring</li>
+                <li>&bull; Upgrades</li>
+                <li>&bull; Data Recovery</li>
+                <li>&bull; Cellphone Support</li>
+            </ul>
         </div>
         <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Contact for Questions or Appointments</h4>
-            <p>For a free consultation or to schedule an appointment, please fill out the form below or e-mail us at <a href="ruben2therescue@gmail.com">ruben2therescue@gmail.com</a></p>
+            <p>Call Ruben To The Rescue at (516) 387-2522 or for a free consultation or to schedule an appointment, please fill out the form below or e-mail us at <a href="ruben2therescue@gmail.com">ruben2therescue@gmail.com</a></p>
             <div id="contact">
             <!--<form action="mailto:ruben2therescue@gmail.com?subject=Technical Support" method="POST" enctype="text/plain">-->
                 <form class="form-horizontal" action="mail.php" method="POST" ng-controller="formController" ng-submit="submit()">
@@ -165,6 +177,12 @@
         </div>
 </div>
 </section>
+
+<!--Javascript and jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 
 <script src="js/app.js"></script>
 </body>

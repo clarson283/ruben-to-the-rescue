@@ -42,7 +42,7 @@
 
 			this.addComment = function() {
 				comments.push(this.comment);
-				this.comment = {};
+				this.comments = {};
 			};
 		});
 

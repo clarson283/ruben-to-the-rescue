@@ -47,6 +47,10 @@ img {
 	text-indent: 20px;
 }
 
+#testimonials blockquote {
+	font-size: 14px;
+}
+
 .tabrow {
 	text-transform: uppercase;
 	letter-spacing: 2px;
