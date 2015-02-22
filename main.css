@@ -1,14 +1,4 @@
-body {
-	background-color: #eee;
-}
-
-.container .top-site {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
 .container-fluid.main-info {
-	background-color: #eee;
 	padding: 70px 30px;
 	background-image: url('images/macimage.jpg');
 	background-size: cover;
@@ -23,15 +13,14 @@ body {
 
 .container-fluid.main-info h1 {
 	letter-spacing: 5px;
-	font-size: 40px
-	;
+	font-size: 40px;
 }
 
 .container.panel-section {
 	padding: 10px 30px;
 }
 
-img {
+#logo-section img {
 	width: 125px;
 }
 
@@ -40,15 +29,12 @@ img {
 }
 
 #testimonials img {
-	width: 30px;
-}
-
-#testimonials p:last-child {
-	text-indent: 20px;
+	width: 24px;
 }
 
 #testimonials blockquote {
 	font-size: 14px;
+	line-height: 2;
 }
 
 .tabrow {
@@ -60,6 +46,6 @@ img {
 	margin-top: 20px;
 }
 
-div p {
+div p, ul li {
 	line-height: 2;
 }
