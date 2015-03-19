@@ -38,7 +38,7 @@
 		});
 
 		app.controller("CommentController", function ($scope) {
-			$scope.comment = {};
+			$scope.comment = [];
 			$scope.btn_add = function() {
 				if($scope.commentCtrl.comment.body != '') {
 					$scope.comment.push($scope.commentCtrl.comment.body);
