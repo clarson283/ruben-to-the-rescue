@@ -37,13 +37,19 @@
 			}
 		});
 
-		app.controller("CommentController", function () {
-			this.comment = {};
-
+		app.controller("CommentController", function ($scope) {
+			$scope.comment = {};
+			$scope.btn_add = function() {
+				if($scope.commentCtrl.comment.body != '') {
+					$scope.comment.push($scope.commentCtrl.comment.body);
+					$scope.commentCtrl.comment.body = '';
+				}
+			}
+/*
 			this.addComment = function() {
 				comments.push(this.comment);
 				this.comments = {};
-			};
+			};*/
 		});
 
 })();
