@@ -70,12 +70,14 @@
                 </div>
 
                 <div id="comment-section">
-                    <br><br><h5>Testing Comment Section</h5>
+                    <br><br><h5>Comments for Ruben to the Rescue!</h5>
                     <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentCtrl.addComment">
                         <blockquote>
                             {{commentCtrl.comment.body}}<br>
                             <cite>- {{commentCtrl.comment.author}}</cite>
+                            <a href="#" class="pull-right" ng-click="removeItem($index)">X</a>
                         </blockquote>
+                        <p>Let us know about your experience and what you think of the services provided.</p>
                         <div class="form-group">
                             <label>message: </label>
                             <textarea ng-model="commentCtrl.comment.body" class="form-control" rows="4"></textarea>

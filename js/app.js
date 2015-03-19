@@ -45,6 +45,10 @@
 					$scope.commentCtrl.comment.body = '';
 				}
 			}
+
+			$scope.removeItem = function($index) {
+				$scope.comment.splice($index, 1);
+			}
 /*
 			this.addComment = function() {
 				comments.push(this.comment);
