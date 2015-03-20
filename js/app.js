@@ -38,22 +38,32 @@
 		});
 
 		app.controller("CommentController", function ($scope) {
+			/*
+			this.comment = {};
+
+			this.addComment = function() {
+				commentCtrl.comment.push(this.comment)
+				this.comment = {};
+			};
+*/
+
+			//$scope is parameter of function
 			$scope.comment = [];
 			$scope.btn_add = function() {
 				if($scope.commentCtrl.comment.body != '') {
+					alert('yes');
 					$scope.comment.push($scope.commentCtrl.comment.body);
-					$scope.commentCtrl.comment.body = '';
+					$scope.commentCtrl.comment.body = '';//deletes both comment and textarea
+					$scope.commentCtrl.comment.author = '';
+				} else {
+					alert('no');
 				}
 			}
 
-			$scope.removeItem = function($index) {
+			$scope.remItem = function($index) {
 				$scope.comment.splice($index, 1);
 			}
-/*
-			this.addComment = function() {
-				comments.push(this.comment);
-				this.comments = {};
-			};*/
+
 		});
 
 })();
