@@ -49,3 +49,7 @@
 div p, ul li {
 	line-height: 2;
 }
+
+div h5 {
+	font-weight: bold;
+}
