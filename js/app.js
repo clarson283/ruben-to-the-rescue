@@ -38,23 +38,17 @@
 		});
 
 		app.controller("CommentController", function ($scope) {
-			/*
-			this.comment = {};
-
-			this.addComment = function() {
-				commentCtrl.comment.push(this.comment)
-				this.comment = {};
-			};
-*/
-
-			//$scope is parameter of function
+			//adding comment to the DOM
 			$scope.comment = [];
-			$scope.btn_add = function() {
-				if($scope.commentCtrl.comment.body != '') {
+			$scope.addComment = function() {
+				if($scope.newComment.body != '') {
 					alert('yes');
-					$scope.comment.push($scope.commentCtrl.comment.body);
-					$scope.commentCtrl.comment.body = '';//deletes both comment and textarea
-					$scope.commentCtrl.comment.author = '';
+					$scope.comment.push($scope.newComment.body);
+					$scope.comment.push($scope.newComment.author);
+					console.log($scope.newComment.body);//prints to console fine
+					console.log($scope.newComment.author);//prints to console fine
+					$scope.newComment.body = '';//deletes both comment and textarea
+					$scope.newComment.author = '';
 				} else {
 					alert('no');
 				}

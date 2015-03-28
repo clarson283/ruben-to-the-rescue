@@ -71,22 +71,22 @@
 
                 <div id="comment-section">
                     <br><br><h5>Comments for Ruben to the Rescue!</h5>
-                    <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="commentCtrl.addComment()">
+                    <form name="commentForm" ng-controller="CommentController as commentCtrl" ng-submit="addComment()">
                         <blockquote ng-repeat="comment in commentCtrl">
-                            {{commentCtrl.comment.body}}<br>
-                            <cite>- {{commentCtrl.comment.author}}</cite>
+                            {{comment.body}}<br>
+                            <cite>- {{comment.author}}</cite>
                             <a href="#" class="pull-right" ng-click="remItem($index)">X</a>
                         </blockquote>
                         <p>Let us know about your experience and what you think of the services provided.</p>
                         <div class="form-group">
                             <label>message: </label>
-                            <textarea ng-model="commentCtrl.comment.body" class="form-control" rows="4"></textarea>
+                            <textarea ng-model="newComment.body" class="form-control" rows="4"></textarea>
                         </div>
                         <div class="form-group">
                             <label>from: </label>
-                            <input ng-model="commentCtrl.comment.author" type="text" class="form-control" />
+                            <input ng-model="newComment.author" type="text" class="form-control" />
                         </div>
-                        <input ng-click="btn_add();" type="submit" value="submit" class="btn btn-default"/>
+                        <input type="submit" value="submit" class="btn btn-default"/>
                     </form>
                 </div>
             </div>
