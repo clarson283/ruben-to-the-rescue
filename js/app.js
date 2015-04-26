@@ -39,16 +39,17 @@
 
 		app.controller("CommentController", function ($scope) {
 			//adding comment to the DOM
-			$scope.comment = [];
+			$scope.comment = {};
+			//$scope.comment = [];
 			$scope.addComment = function() {
-				if($scope.newComment.body != '') {
+				if($scope.comment.body != '') {
 					alert('yes');
-					$scope.comment.push($scope.newComment.body);
-					$scope.comment.push($scope.newComment.author);
-					console.log($scope.newComment.body);//prints to console fine
-					console.log($scope.newComment.author);//prints to console fine
-					$scope.newComment.body = '';//deletes both comment and textarea
-					$scope.newComment.author = '';
+					$scope.comment.push($scope.comment.body);
+					$scope.comment.push($scope.comment.author);
+					console.log($scope.comment.body);//prints to console fine
+					console.log($scope.comment.author);//prints to console fine
+					//$scope.newComment.body = '';//deletes both comment and textarea
+					//$scope.newComment.author = '';
 				} else {
 					alert('no');
 				}
